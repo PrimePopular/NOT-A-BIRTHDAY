@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07080c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>For Muna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- SCREEN 0 -->
+  <section class="scene scene-lock is-active" id="scene-lock" data-scene="lock">
+    <div class="lock-ambient" aria-hidden="true"></div>
+    <div class="lock-wrap">
+      <button class="lock-btn" id="lock-btn" type="button" aria-label="Open">
+        <svg class="padlock" id="padlock" viewBox="0 0 80 100" aria-hidden="true">
+          <path class="shackle" d="M22 42 V28 a18 18 0 0 1 36 0 V42" />
+          <rect class="body" x="14" y="40" width="52" height="44" rx="6" />
+          <circle class="keyhole" cx="40" cy="60" r="4" />
+          <path class="keyslot" d="M40 64 v10" />
+        </svg>
+      </button>
+      <p class="lock-hint" id="lock-hint">There's something here for you.</p>
+
+      <form class="pass-form" id="pass-form" hidden>
+        <label class="pass-label" for="pass-input">A small key</label>
+        <div class="pass-row">
+          <input id="pass-input" class="pass-input" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" />
+          <button class="pass-go" type="submit" aria-label="Enter">
+            <span>Enter</span>
+          </button>
+        </div>
+        <p class="pass-note" id="pass-note" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- SCREEN 1 -->
+  <section class="scene scene-open" id="scene-open" data-scene="open" hidden>
+    <div class="copy stack">
+      <p class="line" data-delay="200">Hi, <em data-name>Muna</em>.</p>
+      <p class="line" data-delay="1400">I know it's not your birthday...</p>
+      <p class="line" data-delay="3200">...but that doesn't mean I can't do something a little special for you.</p>
+    </div>
+    <button class="continue" id="to-truth" type="button" hidden>
+      <span>Come with me</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+  </section>
+
+  <!-- SCREEN 2 -->
+  <section class="scene scene-truth" id="scene-truth" data-scene="truth" hidden>
+    <div class="copy stack">
+      <p class="line" data-delay="200">I know you don't really like pickup lines.</p>
+      <p class="line" data-delay="1600">So I'm not going to give you one.</p>
+      <p class="line quiet" data-delay="3400">I'm just going to tell you the truth.</p>
+    </div>
+    <button class="continue" id="to-photos" type="button" hidden>
+      <span>Keep going</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+  </section>
+
+  <!-- SCREEN 3 -->
+  <section class="scene scene-photos" id="scene-photos" data-scene="photos" hidden>
+    <header class="photos-intro">
+      <p class="eyebrow">Six small things</p>
+      <h2>Not a performance. Just what I notice.</h2>
+    </header>
+    <div class="gallery" id="gallery"></div>
+    <div class="photos-end">
+      <button class="continue" id="to-serious" type="button">
+        <span>There's more</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SCREEN 4 -->
+  <section class="scene scene-serious" id="scene-serious" data-scene="serious" hidden>
+    <div class="copy stack tight">
+      <p class="line" data-delay="180">Okay.</p>
+      <p class="line" data-delay="1100">Let's get serious now.</p>
+      <p class="line" data-delay="2400">There's actually a reason I made this.</p>
+      <p class="line emphasis" data-delay="4000">I like you, you know.</p>
+      <p class="line" data-delay="5600">And I'd actually like to take you out.</p>
+    </div>
+    <button class="continue" id="to-question" type="button" hidden>
+      <span>Ask me</span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </button>
+  </section>
+
+  <!-- SCREEN 5 -->
+  <section class="scene scene-question" id="scene-question" data-scene="question" hidden>
+    <p class="question" id="question-text">Would you go on a date with me?</p>
+    <div class="choices" id="choices">
+      <button class="choice yes" id="choice-yes" type="button">Yes <span class="heart" aria-hidden="true">♥</span></button>
+      <button class="choice think" id="choice-think" type="button">Let me think</button>
+    </div>
+    <div class="answer" id="answer" hidden>
+      <p class="answer-kicker" id="answer-kicker"></p>
+      <p class="answer-body" id="answer-body"></p>
+      <button class="continue" id="to-note" type="button">
+        <span>A note for you</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SCREEN 6 -->
+  <section class="scene scene-note" id="scene-note" data-scene="note" hidden>
+    <div class="letter">
+      <p class="eyebrow" id="note-title">A little note for you.</p>
+      <div class="letter-body" id="letter-body"></div>
+      <p class="signoff" id="signoff"></p>
+    </div>
+    <div class="end-actions">
+      <button class="text-btn" id="read-again" type="button">Read it again</button>
+      <button class="text-btn" id="start-over" type="button">Start over</button>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
