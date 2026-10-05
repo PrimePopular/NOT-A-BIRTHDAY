@@ -74,7 +74,7 @@ Thank you for saying yes.`
 
 I'm not writing this to pull an answer out of you. The question can wait. This part doesn't.
 
-I still want to say what I mean. I want to live a long time beside you — not as a line, as the actual hope. I want to love you the best I can, even if you need a while before you know whether you want that from me. The wanting doesn't turn off because you haven't decided.
+I still want to say what I mean. I want to live a long time beside you  not as a line, as the actual hope. I want to love you the best I can, even if you need a while before you know whether you want that from me. The wanting doesn't turn off because you haven't decided.
 
 You're straightforward. You say the thing as it is. Sometimes it shows on your face before you can put it away, and sometimes you try not to let it. I like both. I like you.
 
