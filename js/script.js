@@ -49,21 +49,37 @@ const CONTENT = {
 
   thinkResponse: {
     kicker: "That's fair.",
-    body: "Take the time you need. The question can wait. This part doesn't ask you for anything."
+    body: "Take the time you need. Nothing here is going anywhere."
   },
 
-  noteTitle: "A little note for you.",
+  /* Two different letters. The site picks one based on her answer. */
+  yesNote: {
+    title: "A little note for you.",
+    signoff: "— yours, if you'll have me",
+    body: `You said yes.
 
-  /* Replace this whole string. Blank lines become paragraph breaks. */
-  loveNote: `[WRITE PERSONAL LOVE NOTE HERE]
+I don't want that to be a small thing. I want to be the person who stays. Not for a season. For as long as you'll let me — and if I'm honest, I want that to be forever.
 
-I made this because I wanted you to have something that wasn't a performance. Not a line. Not a bit.
+I want to love you the best I can. Not perfectly. I'm not going to pretend I won't miss things. But deliberately. The way you actually are: blunt, true, easy to read when you forget to hide it, and careful when you don't want anyone to see too much. I notice those things because I want to know you, not because I want a version of you that's easier.
 
-You are straightforward in a way I trust. You say what you actually think. Sometimes it lands on your face before you have a chance to put it away, and sometimes you try not to let it. I notice both.
+So this is me saying it plainly. I want a life with you in it. The ordinary days as much as the good ones. I want to be yours, and I want you to be mine.
 
-I like you. Clearly enough that I wanted to ask properly — not for a night out, but for you.
+Thank you for saying yes.`
+  },
 
-Whenever you're ready — yes, or not yet — this note stays yours.`,
+  thinkNote: {
+    title: "A little note for you.",
+    signoff: "— still yours to keep",
+    body: `You asked for time. That's allowed.
+
+I'm not writing this to pull an answer out of you. The question can wait. This part doesn't.
+
+I still want to say what I mean. I want to live a long time beside you — not as a line, as the actual hope. I want to love you the best I can, even if you need a while before you know whether you want that from me. The wanting doesn't turn off because you haven't decided.
+
+You're straightforward. You say the thing as it is. Sometimes it shows on your face before you can put it away, and sometimes you try not to let it. I like both. I like you.
+
+So take the time. When you know, tell me. Until then, this note is just yours. No receipt. No pressure.`
+  },
 
   signoff: "— for you"
 };
@@ -222,8 +238,11 @@ const answerKicker = document.getElementById("answer-kicker");
 const answerBody = document.getElementById("answer-body");
 const questionText = document.getElementById("question-text");
 
+let herChoice = "think";
+
 function answerWith(kind) {
-  const data = kind === "yes" ? CONTENT.yesResponse : CONTENT.thinkResponse;
+  herChoice = kind === "yes" ? "yes" : "think";
+  const data = herChoice === "yes" ? CONTENT.yesResponse : CONTENT.thinkResponse;
   answerKicker.textContent = data.kicker;
   answerBody.textContent = data.body;
   choices.classList.add("away");
@@ -245,10 +264,11 @@ const noteTitle = document.getElementById("note-title");
 const signoff = document.getElementById("signoff");
 
 function buildLetter() {
-  noteTitle.textContent = CONTENT.noteTitle;
-  signoff.textContent = CONTENT.signoff;
+  const note = herChoice === "yes" ? CONTENT.yesNote : CONTENT.thinkNote;
+  noteTitle.textContent = note.title;
+  signoff.textContent = note.signoff;
   letterBody.innerHTML = "";
-  CONTENT.loveNote
+  note.body
     .trim()
     .split(/\n\s*\n/)
     .forEach((para) => {
@@ -277,6 +297,7 @@ document.getElementById("read-again").addEventListener("click", () => {
 });
 
 document.getElementById("start-over").addEventListener("click", () => {
+  herChoice = "think";
   unlocked = false;
   padlock.classList.remove("open", "touched", "deny");
   passForm.hidden = true;
