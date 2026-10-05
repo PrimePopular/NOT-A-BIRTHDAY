@@ -28,7 +28,7 @@ const CONTENT = {
     {
       src: "assets/images/photo_2026-09-30_02-06-45.jpg",
       alt: "Photo of Muna, four",
-      caption: "Even when you try to hide that — the almost-smile, the look you pull back — I still catch it."
+      caption: "Even when you try to hide that the almost-smile, the look you pull back  I still catch it."
     },
     {
       src: "assets/images/photo_2026-09-30_02-06-46.jpg",
@@ -55,7 +55,7 @@ const CONTENT = {
   /* Two different letters. The site picks one based on her answer. */
   yesNote: {
     title: "A little note for you.",
-    signoff: "— yours, if you'll have me",
+    signoff: " yours, if you'll have me",
     body: `You said yes.
 
 I don't want that to be a small thing. I want to be the person who stays. Not for a season. For as long as you'll let me — and if I'm honest, I want that to be forever.
