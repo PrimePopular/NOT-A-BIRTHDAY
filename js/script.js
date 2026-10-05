@@ -7,36 +7,36 @@ const CONTENT = {
   name: "Muna",
   password: "MY MAN",
 
-  dateNote: "Whenever you're free. Somewhere quiet.",
+  dateNote: "",
 
   photos: [
     {
-      src: "assets/images/muna-01.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-38.jpg",
       alt: "Photo of Muna, one",
       caption: "There's something about the way you say the thing as it is. No extra shine on it."
     },
     {
-      src: "assets/images/muna-02.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-42.jpg",
       alt: "Photo of Muna, two",
       caption: "I like that you're the kind of person who doesn't dress a thought up just to make it easier."
     },
     {
-      src: "assets/images/muna-03.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-44.jpg",
       alt: "Photo of Muna, three",
       caption: "You're surprisingly easy to read sometimes. It shows on your face before you decide what to do with it."
     },
     {
-      src: "assets/images/muna-04.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-45.jpg",
       alt: "Photo of Muna, four",
       caption: "Even when you try to hide that — the almost-smile, the look you pull back — I still catch it."
     },
     {
-      src: "assets/images/muna-05.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-46.jpg",
       alt: "Photo of Muna, five",
       caption: "I appreciate how direct you are. Blunt, even. It makes the room simpler."
     },
     {
-      src: "assets/images/muna-06.jpg",
+      src: "assets/images/photo_2026-09-30_02-06-47.jpg",
       alt: "Photo of Muna, six",
       caption: "And maybe you don't realize how much I notice those little things. I do."
     }
@@ -44,7 +44,7 @@ const CONTENT = {
 
   yesResponse: {
     kicker: "Good.",
-    body: "Then it's a date. Nothing elaborate — just time, and you, and me actually paying attention."
+    body: "Then you're mine in the way that matters. No performance. Just us, for real."
   },
 
   thinkResponse: {
@@ -61,12 +61,13 @@ I made this because I wanted you to have something that wasn't a performance. No
 
 You are straightforward in a way I trust. You say what you actually think. Sometimes it lands on your face before you have a chance to put it away, and sometimes you try not to let it. I notice both.
 
-I like you. Clearly enough that I wanted to ask properly.
+I like you. Clearly enough that I wanted to ask properly — not for a night out, but for you.
 
 Whenever you're ready — yes, or not yet — this note stays yours.`,
 
   signoff: "— for you"
 };
+
 
 /* =========================================================
    Experience
