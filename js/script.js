@@ -36,7 +36,7 @@ const CONTENT = {
       caption: "I appreciate how direct you are. Blunt, even. It makes the room simpler."
     },
     {
-      src: "assets/images/photo_2026-09-30_02-06-47 (2).jpg",
+      src: "assets/images/photo_2026-09-30_02-06-47.jpg",
       alt: "Photo of Muna, six",
       caption: "And maybe you don't realize how much I notice those little things. I do."
     }
